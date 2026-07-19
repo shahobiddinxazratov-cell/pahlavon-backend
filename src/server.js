@@ -7,6 +7,7 @@ const doctorsRoutes = require("./routes/doctors");
 const appointmentsRoutes = require("./routes/appointments");
 const announcementsRoutes = require("./routes/announcements");
 const socialRoutes = require("./routes/social");
+const settingsRoutes = require("./routes/settings");
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use("/api/doctors", doctorsRoutes);
 app.use("/api/appointments", appointmentsRoutes);
 app.use("/api/announcements", announcementsRoutes);
 app.use("/api/social", socialRoutes);
+app.use("/api/settings", settingsRoutes);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Server ${PORT}-portda ishga tushdi`));
